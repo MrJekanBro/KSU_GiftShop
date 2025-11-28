@@ -20,7 +20,7 @@ UML-діаграми дозволяють:
 
 # 2. UML-діаграми 
 
-### Діаграма класів
+## Діаграма класів
 
 ```PlantUML
 @startuml
@@ -186,7 +186,7 @@ Delivery / SupplyOrder — поставки від постачальників.
 
 ---
 
-### Діаграма послідовностей (Use Case: оформлення продажу)
+## Діаграма послідовностей (Use Case: оформлення продажу)
 
 ```PlantUML
 @startuml
@@ -228,8 +228,9 @@ ReceiptPrinter --> Seller : receiptPrinted
 
 друк чека.
 
+---
 
-### Діаграма станів (Product Lifecycle)
+## Діаграма станів (Product Lifecycle)
 ```PlantUML
 @startuml
 [*] --> Created
