@@ -1,4 +1,4 @@
-![Class Diagram](images/ClassDiagram.png)
+![Class Diagram](ClassDiagram.png)
 
 
 
