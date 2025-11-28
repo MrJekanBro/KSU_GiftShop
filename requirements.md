@@ -137,4 +137,9 @@
 
 ---
 
-### Коментар у GitHub  
+# 6. Коментар у GitHub
+Після додавання файлу:  
+```bash
+git add requirements.md
+git commit -m "Add requirements specification"
+git push
