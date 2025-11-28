@@ -172,17 +172,12 @@ WarehouseWorker "1" --> "*" Delivery : processes
 
 Пояснення
 
-User — базовий клас з ролями.
-
-Admin / Manager / Seller / WarehouseWorker — спадкоємці, кожний має свої функції.
-
-Product — основна сутність каталогу.
-
-Sale та SaleItem — продаж і його позиції.
-
-Delivery / SupplyOrder — поставки від постачальників.
-
-Зв’язки включають композицію, агрегацію й асоціації.
+-User — базовий клас з ролями.
+-Admin / Manager / Seller / WarehouseWorker — спадкоємці, кожний має свої функції.
+-Product — основна сутність каталогу.
+-Sale та SaleItem — продаж і його позиції.
+-Delivery / SupplyOrder — поставки від постачальників.
+-Зв’язки включають композицію, агрегацію й асоціації.
 
 ---
 
