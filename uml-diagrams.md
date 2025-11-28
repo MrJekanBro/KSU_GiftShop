@@ -22,7 +22,7 @@ UML-діаграми дозволяють:
 
 ## Діаграма класів
 
-![Class Diagram](ClassDiagram.png)
+![Class Diagram](Diagram/ClassDiagram.png)
 
 ```PlantUML
 @startuml
@@ -184,7 +184,7 @@ WarehouseWorker "1" --> "*" Delivery : processes
 
 ## Діаграма послідовностей (Use Case: оформлення продажу)
 
-![SequenceDiagram](SequenceDiagram.png)
+![SequenceDiagram](Diagram/SequenceDiagram.png)
 
 ```PlantUML
 @startuml
@@ -224,7 +224,7 @@ ReceiptPrinter --> Seller : receiptPrinted
 
 ## Діаграма станів (Product Lifecycle)
 
-![StateDiagram](StateDiagram.png)
+![StateDiagram](Diagram/StateDiagram.png)
 
 ```PlantUML
 @startuml
