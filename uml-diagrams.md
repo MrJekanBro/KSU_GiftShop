@@ -18,7 +18,10 @@ UML-діаграми дозволяють:
 
 ---
 
-# 2. UML-діаграми Діаграма класів
+# 2. UML-діаграми 
+
+### Діаграма класів
+
 ```PlantUML
 @startuml
 ' === ENUMS ===
@@ -174,7 +177,7 @@ Sale та SaleItem — продаж і його позиції.
 Delivery / SupplyOrder — поставки від постачальників.
 Зв’язки включають композицію, агрегацію й асоціації.
 
-3. Діаграма послідовностей (Use Case: оформлення продажу)
+### Діаграма послідовностей (Use Case: оформлення продажу)
 
 ```PlantUML
 @startuml
@@ -212,7 +215,7 @@ ReceiptPrinter --> Seller : receiptPrinted
 друк чека.
 
 
-Діаграма станів (Product Lifecycle)
+### Діаграма станів (Product Lifecycle)
 ```PlantUML
 @startuml
 [*] --> Created
