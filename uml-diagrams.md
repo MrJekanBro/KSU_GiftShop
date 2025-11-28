@@ -1,4 +1,5 @@
-![Class Diagram](https://www.plantuml.com/plantuml/png/SoWkIImgAStDuKhEIImkLd3AJ4ZDAybCJYqjKaejoKZDAybCJYp9pSd9pKi0000)
+![Class Diagram](//www.plantuml.com/plantuml/png/ZP51IWCn58RtSuh7hDGo2xU3b6vSMr4F43EX13F9cBmiYWXQ5JVYgdWE4HU2fLuXkP5fd406YdIHcSoV_trltf-9GQBHjgAWWXW35uPfk2a0Ak1D3LnYt4lIiXeCQYvdKT1AvC88X9fnkRUVzifY-BWjUknKgyPIt8NSQKw3qYXxALXKhYsHo76UYaPWkuOWE-trlD69RhOEiF7NyOcy_SEYGYAcURV8faHGAuBnV7EUiyzirmc-MpvKIIGK1n4P9fl8c0-egEZLiKGzty9De_ypo0Wqct63JEViU8_bOGbLDORoeEo3gS6j_MDOTsxbllshNyAuY4VHL5NnbMuhk5V-pT_xXVlo2_yIl2c3m4xsV88QZi3zk7MiUVVFOIsBXCj-PrZZFloJMxlFlej_28qc8IpRYby0)
+
 
 
 # UML-Діаграми для проєкту **KSU GiftShop**
