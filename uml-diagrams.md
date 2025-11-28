@@ -1,3 +1,6 @@
+![Class Diagram](https://www.plantuml.com/plantuml/png/SoWkIImgAStDuKhEIImkLd3AJ4ZDAybCJYqjKaejoKZDAybCJYp9pSd9pKi0000)
+
+
 # UML-Діаграми для проєкту **KSU GiftShop**
 ### Автоматизована інформаційна система сувенірної лавки Херсонського державного університету.
 
