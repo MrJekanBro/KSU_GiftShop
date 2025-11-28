@@ -184,6 +184,8 @@ WarehouseWorker "1" --> "*" Delivery : processes
 
 ## Діаграма послідовностей (Use Case: оформлення продажу)
 
+![SequenceDiagram](SequenceDiagram.png)
+
 ```PlantUML
 @startuml
 actor Seller
@@ -221,6 +223,8 @@ ReceiptPrinter --> Seller : receiptPrinted
 ---
 
 ## Діаграма станів (Product Lifecycle)
+
+![StateDiagram](StateDiagram.png)
 
 ```PlantUML
 @startuml
