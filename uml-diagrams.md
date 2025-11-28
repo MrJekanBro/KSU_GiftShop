@@ -1,4 +1,5 @@
-![Class Diagram]([https://www.plantuml.com/plantuml/png/SoWkIImgAStDuKhEIImkLd3AJ4ZDAybCJYqjKaejoKZDAybCJYp9pSd9pKi0000](https://share.google/images/fcxI95cbfKBssOPor))
+![Class Diagram](images/ClassDiagram.png)
+
 
 
 # UML-Діаграми для проєкту **KSU GiftShop**
