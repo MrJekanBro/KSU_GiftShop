@@ -220,7 +220,8 @@ ReceiptPrinter --> Seller : receiptPrinted
 
 ## Діаграма станів (Product Lifecycle)
 
-classDiagram
+```PlantUML
+@startuml
 [*] --> Created
 
 Created --> InStock : deliveryAccepted
@@ -233,7 +234,8 @@ LowStock --> Discontinued : archived
 OutOfStock --> Discontinued : archived
 
 Discontinued --> [*]
-
+@enduml
+```
 
 
 ### Пояснення
