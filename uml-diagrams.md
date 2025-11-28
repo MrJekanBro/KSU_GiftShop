@@ -1,7 +1,3 @@
-![Class Diagram](ClassDiagram.png)
-
-
-
 # UML-Діаграми для проєкту **KSU GiftShop**
 ### Автоматизована інформаційна система сувенірної лавки Херсонського державного університету.
 
@@ -25,6 +21,8 @@ UML-діаграми дозволяють:
 # 2. UML-діаграми 
 
 ## Діаграма класів
+
+![Class Diagram](ClassDiagram.png)
 
 ```PlantUML
 @startuml
