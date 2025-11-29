@@ -28,8 +28,9 @@
 
 ![DB diagram](Diagram/dbdiagram.jpg)
 
+---
 
-dbdiagram.io-код:
+### dbdiagram.io-код:
 
 ```sql
 Table Users {
