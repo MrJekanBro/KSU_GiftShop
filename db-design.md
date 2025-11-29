@@ -26,7 +26,7 @@
 
 ## 2. ER-діаграма
 
-![Class Diagram](Diagram/dbdiagram.png)
+![DB diagram](Diagram/dbdiagram.png)
 
 
 dbdiagram.io-код:
