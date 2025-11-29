@@ -50,3 +50,4 @@ async function loadCatalog() {
         itemsDiv.appendChild(card);
     });
 }
+
