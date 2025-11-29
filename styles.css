@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #eef1f5;
+    padding: 20px;
+    margin: 0;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+form {
+    max-width: 350px;
+    margin: auto;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: #0066cc;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #004a99;
+}
+
+#items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.item-card {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сувенірна лавка ХДУ</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <h1>Сувенірна лавка ХДУ</h1>
+</header>
+
+<main>
+
+    <!-- Блок: Реєстрація -->
+    <section id="register">
+        <h2>Реєстрація</h2>
+        <form id="regForm">
+            <input type="text" id="username" placeholder="Ім'я користувача" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="password" id="password" placeholder="Пароль">
+            <button type="submit">Зареєструватися</button>
+        </form>
+    </section>
+
+    <!-- Блок: Каталог (показується після реєстрації) -->
+    <section id="catalog" style="display:none;">
+        <h2>Каталог товарів</h2>
+        <div id="items"></div>
+    </section>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
