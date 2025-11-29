@@ -3,8 +3,8 @@
 ---
 
 ## Вступ:
-Backend системи KSU GiftShop реалізовано на фреймворку Flask (Python).
-Сервер надає RESTful API для роботи з даними користувачів, а у майбутньому - з товарами, продажами та поставками.
+**Backend системи** **KSU GiftShop** реалізовано на фреймворку **Flask** (Python).
+Сервер надає **RESTful API** для роботи з даними користувачів, а у майбутньому - з товарами, продажами та поставками.
 
 У цьому документі подано:
 - налаштування середовища розробки;
@@ -19,25 +19,19 @@ Backend системи KSU GiftShop реалізовано на фреймвор
 
 Для роботи сервера необхідно встановити наступні бібліотеки Python
 
-SQLAlchemy:
+Flask + CORS
 ```
-pip install sqlalchemy psycopg2
-```
-
-Flask (CORS — для frontend):
-```
-pip install flask sqlalchemy psycopg2-binary flask-cors
+pip install flask flask-cors
 ```
 
-SQLAlchemy: 
+SQLAlchemy (ORM) + драйвер PostgreSQL
 ```
-pip install sqlalchemy
+pip install sqlalchemy psycopg2-binary
 ```
 
 ---
 
 ## Код сервера:
-
 
 ### models.py (Визначення моделі даних)
 
@@ -71,10 +65,10 @@ DATABASE_URI = "postgresql://postgres:possword@localhost/souvenir_shop"
 Файл містить налаштування Flask, ініціалізацію БД та маршрути API.
 
 Пояснення:
-- @app.route() — створює URL-ендпоінт (маршрут).
-- jsonify() — формує JSON-відповідь.
+- @app.route() — створює URL-ендпоінт (маршрут) .
+- jsonify() — Перетворює Python-словник в JSON-відповідь.
 - request.json — отримання тіла POST/PUT запиту.
-- 
+
 ```Python
 from flask import Flask, jsonify, request
 from flask_cors import CORS
@@ -169,6 +163,9 @@ if __name__ == '__main__':
 ---
 
 ## Інтеграція з БД:
+Реальна база даних - **souvenir_shop**
+**SQLAlchemy** створює таблицю **users** згідно моделі
+
 ### Перевірка створення таблиці
 У pgAdmin:
 ```
@@ -184,3 +181,18 @@ SELECT * FROM users;
 ---
 
 ## Висновки:
+
+### У ході практичної роботи було:
+- розгорнуто середовище Flask;
+- створено RESTful API відповідно до вимог;
+- реалізовано базові CRUD-операції для сутності User;
+- виконано підключення до PostgreSQL через SQLAlchemy;
+- протестовано API через Postman;
+- API відповідає UML та структурі БД з попередньої роботи.
+
+### Отриманий backend стане основою для:
+- авторизації,
+- роботи з товарами,
+- продажами,
+- звітами,
+- підключення frontend.
