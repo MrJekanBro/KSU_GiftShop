@@ -26,7 +26,10 @@
 
 ## 2. ER-діаграма
 
-Нижче наведено **dbdiagram.io-код**, який можна вставити на https://dbdiagram.io:
+![Class Diagram](Diagram/dbdiagram.png)
+
+
+dbdiagram.io-код:
 
 ```sql
 Table Users {
