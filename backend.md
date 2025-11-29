@@ -1,13 +1,18 @@
 # backend  
-## Проєкт: **KSU GiftShop – Інформаційна система сувенірної лавки ХДУ**
 
 ---
 
 ## Вступ:
 
+Backend для інформаційної системи "KSU GiftShop" реалізовано на мікрофреймворку Flask з використанням PostgreSQL як основного сховища даних. Для взаємодії з БД використовується бібліотека Flask-SQLAlchemy.
+
+Поточний функціонал включає три основні ендпоінти для керування користувачами:
+
+
 ---
 
 ## Налаштування:
+Для роботи сервера необхідно встановити наступні пакети Python
 
 SQLAlchemy:
 ```
@@ -27,10 +32,11 @@ pip install sqlalchemy
 ---
 
 ## Код сервера:
+Код розділено на три файли для кращої структуризації.
 
-### models
+### models.py (Визначення моделі даних)
 
-```
+```Python
 from flask_sqlalchemy import SQLAlchemy
 
 db = SQLAlchemy()
@@ -46,15 +52,16 @@ class User(db.Model):
     role = db.Column(db.String(20))     # 'admin','manager','seller','warehouse','supplier'
 ```
 
-### config
+### config.py (Конфігурація підключення)
 
-```
+```Python
 DATABASE_URI = "postgresql://postgres:possword@localhost/souvenir_shop"
 ```
 
-### app
+### app.py (Основний файл додатку)
+Файл містить налаштування Flask, ініціалізацію БД та маршрути API.
 
-```
+```Python
 from flask import Flask, jsonify, request
 from flask_cors import CORS
 from flask_sqlalchemy import SQLAlchemy
