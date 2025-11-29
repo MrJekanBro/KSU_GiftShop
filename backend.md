@@ -52,11 +52,15 @@ class User(db.Model):
     role = db.Column(db.String(20))     # 'admin','manager','seller','warehouse','supplier'
 ```
 
+---
+
 ### config.py (Конфігурація підключення)
 
 ```Python
 DATABASE_URI = "postgresql://postgres:possword@localhost/souvenir_shop"
 ```
+
+---
 
 ### app.py (Основний файл додатку)
 Файл містить налаштування Flask, ініціалізацію БД та маршрути API.
@@ -129,7 +133,6 @@ def delete_user(user_id):
 if __name__ == '__main__':
     app.run(debug=True)
 ```
-
 
 ---
 
