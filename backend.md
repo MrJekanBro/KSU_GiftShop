@@ -141,7 +141,6 @@ if __name__ == '__main__':
 | DELETE | /users/(n) | видалення конкретного користувача |
 
 ### Скриншоти: 
-
 ### Додавання: 
 ![POST1](image/POST1.jpg)
 ![POST2](image/POST2.jpg)
