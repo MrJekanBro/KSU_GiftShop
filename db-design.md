@@ -32,7 +32,7 @@
 
 ### dbdiagram.io-код:
 
-```sql
+```dbdiagram
 Table Users {
   id int [pk, increment]
   full_name varchar(100)
@@ -103,3 +103,6 @@ Table DeliveryItems {
   product_id int [ref: > Products.id]
   quantity int
 }
+```
+
+#### 
