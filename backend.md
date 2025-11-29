@@ -9,6 +9,15 @@
 
 ## Налаштування:
 
+SQLAlchemy:
+```pip install sqlalchemy psycopg2```
+
+Flask (CORS — для frontend):
+```pip install flask sqlalchemy psycopg2-binary flask-cors```
+
+SQLAlchemy: 
+```pip install sqlalchemy```
+
 ---
 
 ## Код сервера:
