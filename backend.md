@@ -143,11 +143,13 @@ if __name__ == '__main__':
 ### Скриншоти
 
 #### Додавання
+![POST](image/POST.jpg)
 
 #### Перегляд
+![GET](image/GET.jpg)
 
 #### Видалення
-
+![DELETE](image/DELETE.jpg)
 
 
 ---
