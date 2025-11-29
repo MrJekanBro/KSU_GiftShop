@@ -140,16 +140,16 @@ if __name__ == '__main__':
 | GET | /users/(n) | перегляд конкретного користувача |
 | DELETE | /users/(n) | видалення конкретного користувача |
 
-### Скриншоти
+### Скриншоти: 
 
-#### Додавання
+### Додавання: 
 ![POST1](image/POST1.jpg)
 ![POST2](image/POST2.jpg)
 
-#### Перегляд
+### Перегляд: 
 ![GET](image/GET.jpg)
 
-#### Видалення
+### Видалення: 
 ![DELETE1](image/DELETE1.jpg)
 ![DELETE2](image/DELETE2.jpg)
 
