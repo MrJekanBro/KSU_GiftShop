@@ -13,14 +13,19 @@
 </header>
 
 <main>
-
+	<select id="role">
+	  <option value="seller">Продавець</option>
+	  <option value="manager">Менеджер</option>
+	  <option value="admin">Адмін</option>
+	</select>
+	
     <!-- Блок: Реєстрація -->
     <section id="register">
         <h2>Реєстрація</h2>
         <form id="regForm">
             <input type="text" id="username" placeholder="Ім'я користувача" required>
             <input type="email" id="email" placeholder="Email" required>
-            <input type="password" id="password" placeholder="Пароль">
+            <input type="password_hash" id="password_hash" placeholder="Пароль">
             <button type="submit">Зареєструватися</button>
         </form>
     </section>
@@ -36,4 +41,3 @@
 <script src="script.js"></script>
 </body>
 </html>
-
