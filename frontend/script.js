@@ -7,12 +7,12 @@ document.getElementById('regForm').addEventListener('submit', async (e) => {
     const password_hash = document.getElementById('password_hash').value;
 	const role = document.getElementById("role").value;
 
-
     try {
         const response = await fetch('http://localhost:5000/users/register', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({ full_name, username, email, password_hash: password_hash, role})
+			alert("Користувача створено!");
         });
 
         if (!response.ok) {
