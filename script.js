@@ -2,14 +2,15 @@ document.getElementById('regForm').addEventListener('submit', async (e) => {
     e.preventDefault();
 
     const username = document.getElementById('username').value;
-    const email    = document.getElementById('email').value;
-    const password = document.getElementById('password').value;
+    const email = document.getElementById('email').value;
+    const password_hash = document.getElementById('password_hash').value;
+	const role = document.getElementById("role").value;
 
     try {
         const response = await fetch('http://localhost:5000/users/register', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify({ username, email, password_hash: password })
+            body: JSON.stringify({ username, email, password_hash: password_hash, role})
         });
 
         if (!response.ok) {
@@ -50,4 +51,3 @@ async function loadCatalog() {
         itemsDiv.appendChild(card);
     });
 }
-
