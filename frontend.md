@@ -352,8 +352,7 @@ button:hover {
 ## 5. Інтеграція
 ### UI викликає backend API:
 - POST /users/register — реєстрація користувача (вміст тіла JSON: {full_name, username, email, password_hash, role}).
-- В майбутньому: GET /products або GET /products?category=одяг — для завантаження каталогу.
-### На сьогодні каталог — статичний масив у script.js. Для повноцінної роботи замінити виклики на fetch-запити до бекенду та обробити CORS (у Flask: flask-cors).
+- В майбутньому: GET /products або GET /products?category=<type> — для завантаження товару.
 
 ---
 
