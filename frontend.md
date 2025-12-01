@@ -26,7 +26,7 @@ Frontend для проєкту **KSU GiftShop — Сувенірна лавка 
 
 ### index.html
 
-```html:disable-run
+```html
 <!DOCTYPE html>
 <html lang="uk">
 <head>
