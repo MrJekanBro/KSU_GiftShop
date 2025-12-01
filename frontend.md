@@ -335,13 +335,13 @@ button:hover {
 ### На сторінці каталогу перевірити кнопки фільтрів.
 ![frontend_catalog](frontend/frontend_catalog.jpg)
 
-### Перевірка:
-POST запит
+---
 
+### Перевірка:
+- POST запит
 ![POST_reg](frontend/POST_reg.jpg)
 
-Запис даних нового користувача у базу даних
-
+- Запис даних нового користувача у базу даних
 ![pdAdmin_reg](frontend/pdAdmin_reg.jpg)
 
 
