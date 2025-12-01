@@ -339,11 +339,11 @@ button:hover {
 
 ### Перевірка:
 - POST запит
-- 
+
 ![POST_reg](frontend/POST_reg.jpg)
 
 - Запис даних нового користувача у базу даних
-- 
+
 ![pdAdmin_reg](frontend/pdAdmin_reg.jpg)
 
 
