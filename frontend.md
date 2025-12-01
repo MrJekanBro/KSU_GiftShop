@@ -329,8 +329,15 @@ button:hover {
 ---
 
 ## 4. Тестування
+### Відкрити index.html через Live Server або просто у браузері та заповнити форму реєстрації.
+![frontend_catalog](frontend/frontend_catalog.jpg)
+
+### На сторінці каталогу перевірити кнопки фільтрів.
 ![frontend_catalog](frontend/frontend_catalog.jpg)
 ![frontend_catalog](frontend/frontend_catalog.jpg)
+![frontend_catalog](frontend/frontend_catalog.jpg)
+
+### Відкрити 
 ![frontend_catalog](frontend/frontend_catalog.jpg)
 
 ---
