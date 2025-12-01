@@ -15,10 +15,10 @@ Frontend для проєкту **KSU GiftShop** реалізовано у виг
 
 ## 2. Wireframe
 ### Екран «Реєстрація»: поля для ФІО, username, email, пароль, select для ролі, кнопка «Зареєструватися».
-![frontend_register](frontend/frontend_register.jpg)
+![figma_register](frontend/figma_register.jpg)
 
 ### Екран «Каталог»: панель фільтрів товарів, кнопки сортування, сітка карток товарів.
-![frontend_catalog](frontend/frontend_catalog.jpg)
+![figma_catalog](frontend/figma_catalog.jpg)
 
 ---
 
@@ -330,7 +330,7 @@ button:hover {
 
 ## 4. Тестування
 ### Відкрити index.html через Live Server або просто у браузері та заповнити форму реєстрації.
-![frontend_catalog](frontend/frontend_catalog.jpg)
+![frontend_register](frontend/frontend_register.jpg)
 
 ### На сторінці каталогу перевірити кнопки фільтрів.
 ![frontend_catalog](frontend/frontend_catalog.jpg)
