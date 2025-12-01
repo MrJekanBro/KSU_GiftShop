@@ -32,26 +32,58 @@ document.getElementById('regForm').addEventListener('submit', async (e) => {
 async function loadCatalog(category = "all") {
     const itemsDiv = document.getElementById('items');
 
-    // Тимчасові дані (до створення API)
-    const items = [
+	// Тимчасові дані (до створення API)
+	const items = [
 		{name: "Футболка ХДУ", price: 350, category: "одяг", quantity: 12},
 		{name: "Куртка ХДУ", price: 800, category: "одяг", quantity: 6},
-
+		{name: "Штани ХДУ", price: 600, category: "одяг", quantity: 8},
+		{name: "Светр ХДУ", price: 450, category: "одяг", quantity: 10},
 		{name: "Кросівки ХДУ", price: 1200, category: "взуття", quantity: 4},
 		{name: "Кеди ХДУ", price: 650, category: "взуття", quantity: 10},
-
+		{name: "Тапочки ХДУ", price: 300, category: "взуття", quantity: 15},
 		{name: "Зошит 32л", price: 10, category: "канцелярія", quantity: 100},
+		{name: "Зошит 48л", price: 15, category: "канцелярія", quantity: 80},
 		{name: "Ручка ХДУ", price: 5, category: "канцелярія", quantity: 250},
-
+		{name: "Олівець ХДУ", price: 3, category: "канцелярія", quantity: 300},
+		{name: "Маркер ХДУ", price: 20, category: "канцелярія", quantity: 60},
 		{name: "Наліпка ХДУ", price: 15, category: "наліпки", quantity: 80},
 		{name: "Набір наліпок", price: 40, category: "наліпки", quantity: 45},
-
+		{name: "Стікери ХДУ", price: 25, category: "наліпки", quantity: 70},
 		{name: "Магніт ХДУ", price: 35, category: "магніти", quantity: 30},
 		{name: "Великий магніт ХДУ", price: 60, category: "магніти", quantity: 20},
-
+		{name: "Магнітний набір ХДУ", price: 80, category: "магніти", quantity: 15},
 		{name: "Кружка ХДУ", price: 120, category: "посуд", quantity: 18},
 		{name: "Тарілка ХДУ", price: 200, category: "посуд", quantity: 10},
+		{name: "Чашка ХДУ", price: 90, category: "посуд", quantity: 25},
+		{name: "Склянка ХДУ", price: 70, category: "посуд", quantity: 30},
+		{name: "Рюкзак ХДУ", price: 750, category: "аксесуари", quantity: 12},
+		{name: "Пенал ХДУ", price: 80, category: "канцелярія", quantity: 50},
+		{name: "Блокнот ХДУ", price: 50, category: "канцелярія", quantity: 40},
+		{name: "Кепка ХДУ", price: 220, category: "одяг", quantity: 15},
+		{name: "Шарф ХДУ", price: 180, category: "одяг", quantity: 20},
+		{name: "Ремінь ХДУ", price: 200, category: "одяг", quantity: 10},
+		{name: "Поясна сумка ХДУ", price: 300, category: "аксесуари", quantity: 18},
+		{name: "Набір фарб", price: 120, category: "канцелярія", quantity: 30},
+		{name: "Пензлі", price: 35, category: "канцелярія", quantity: 50},
+		{name: "Альбом для малювання", price: 60, category: "канцелярія", quantity: 40},
+		{name: "Ланчбокс ХДУ", price: 150, category: "посуд", quantity: 22},
+		{name: "Термос ХДУ", price: 400, category: "посуд", quantity: 15},
+		{name: "Брелок ХДУ", price: 50, category: "аксесуари", quantity: 60},
+		{name: "Сумка для ноутбука", price: 900, category: "аксесуари", quantity: 8},
+		{name: "Папка для документів", price: 70, category: "аксесуари", quantity: 35},
+		{name: "Маска ХДУ", price: 30, category: "аксесуари", quantity: 100},
+		{name: "Антисептик ХДУ", price: 60, category: "аксесуари", quantity: 50},
+		{name: "Наклейки для ноутбука", price: 45, category: "наліпки", quantity: 65},
+		{name: "Значок ХДУ", price: 25, category: "аксесуари", quantity: 80},
+		{name: "Скатертина ХДУ", price: 220, category: "посуд", quantity: 10},
+		{name: "Коврик для миші ХДУ", price: 100, category: "аксесуари", quantity: 40},
+		{name: "Папка-регістратор", price: 120, category: "канцелярія", quantity: 25},
+		{name: "Флешка ХДУ 32GB", price: 250, category: "аксесуари", quantity: 20},
+		{name: "Блокнот з логотипом ХДУ", price: 70, category: "канцелярія", quantity: 45},
+		{name: "Міні-щоденник", price: 60, category: "канцелярія", quantity: 30},
+		{name: "Набір ручок гелевих", price: 30, category: "канцелярія", quantity: 100},
 	];
+
 
     itemsDiv.innerHTML = '';
 
