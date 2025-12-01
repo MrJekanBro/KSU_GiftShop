@@ -15,10 +15,10 @@ Frontend для проєкту **KSU GiftShop — Сувенірна лавка 
 
 ## 2. Wireframe
 ### Екран «Реєстрація»: поля для ФІО, username, email, пароль, select для ролі, кнопка «Зареєструватися».
-![POST2](image/POST2.jpg)
+![frontend_register](frontend/frontend_register.jpg)
 
 ### Екран «Каталог»: панель фільтрів товарів, кнопки сортування, сітка карток товарів.
-![POST2](image/POST2.jpg)
+![frontend_catalog](frontend/frontend_catalog.jpg)
 
 
 ---
