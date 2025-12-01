@@ -331,6 +331,8 @@ button:hover {
 ## 4. Тестування
 ![frontend_catalog](frontend/frontend_catalog.jpg)
 ![frontend_catalog](frontend/frontend_catalog.jpg)
+![frontend_catalog](frontend/frontend_catalog.jpg)
+
 ---
 
 ## 5. Інтеграція
