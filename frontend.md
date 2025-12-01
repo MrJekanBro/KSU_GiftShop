@@ -327,15 +327,14 @@ button:hover {
 ```
 
 ---
-5. Інтеграція
-- UI викликає backend API:
--- POST /users/register — реєстрація користувача (вміст тіла JSON: {full_name, username, email, password_hash, role}).
--- В майбутньому: GET /products або GET /products?category=одяг — для завантаження каталогу.
-- На сьогодні каталог — статичний масив у script.js. Для повноцінної роботи замінити виклики на fetch-запити до бекенду та обробити CORS (у Flask: flask-cors).
+## 5. Інтеграція
+### UI викликає backend API:
+- POST /users/register — реєстрація користувача (вміст тіла JSON: {full_name, username, email, password_hash, role}).
+- В майбутньому: GET /products або GET /products?category=одяг — для завантаження каталогу.
+### На сьогодні каталог — статичний масив у script.js. Для повноцінної роботи замінити виклики на fetch-запити до бекенду та обробити CORS (у Flask: flask-cors).
 
 ---
 
-6. Висновки
-
+## 6. Висновки
 - UI охоплює ключові use-cases: реєстрацію та перегляд каталогу із фільтрами й сортуванням.
 - Прототип готовий до подальшої інтеграції з backend: для повноцінної роботи достатньо додати GET /products і підключити реальні дані.
