@@ -327,6 +327,12 @@ button:hover {
 ```
 
 ---
+
+## 4. Тестування
+![frontend_catalog](frontend/frontend_catalog.jpg)
+![frontend_catalog](frontend/frontend_catalog.jpg)
+---
+
 ## 5. Інтеграція
 ### UI викликає backend API:
 - POST /users/register — реєстрація користувача (вміст тіла JSON: {full_name, username, email, password_hash, role}).
