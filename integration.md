@@ -237,6 +237,7 @@ VALUES
 ![Catalogue](image/Catalogue.jpg)
 
 - вхід у систему/ відображення каталогу товарів
+
 | Дані коректні | Дані некоректні |
 | ---------- | ---------- |
 | ![loginOK](image/loginOK.jpg) | ![loginNO](image/loginNO.jpg) |
