@@ -94,13 +94,19 @@ def register_user():
 
     if not data.get("username") or not data.get("email"):
         return jsonify({"error": "No email or username"}), 400
+    
+    valid_roles = ["admin", "manager", "seller", "warehouse", "supplier"]
+    role = data.get("role", "seller")   # якщо не передали, буде "seller"
 
+    if role not in valid_roles:
+        return jsonify({"error": "Invalid role"}), 400
+    
     user = User(
         username=data["username"],
         email=data["email"],
         full_name=data.get("full_name", ""),
         password_hash=data.get("password_hash", ""),
-        role=data.get("role", "")
+        role=role
     )
 
     db.session.add(user)
