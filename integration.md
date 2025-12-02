@@ -233,12 +233,19 @@ VALUES
 ## Тестування
 
 - форма логіну в браузері
+
+![Catalogue](image/Catalogue.jpg)
+
 - вхід у систему/ відображення каталогу товарів
-- вихід із системи
-
-
 | Дані коректні | Дані некоректні |
 | ---------- | ---------- |
-|  |  |
+| ![loginOK](image/loginOK.jpg) | ![loginNO](image/loginNO.jpg) |
+
+- вихід із системи
+
+![loginForm](image/loginForm.jpg)
+
+
+
 
 
