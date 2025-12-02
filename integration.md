@@ -234,17 +234,21 @@ VALUES
 
 - форма логіну в браузері
 
-![Catalogue](image/Catalogue.jpg)
+![loginFormIn](image/loginFormIn.jpg)
 
-- вхід у систему/ відображення каталогу товарів
+- вхід у систему
 
 | Дані коректні | Дані некоректні |
 | ---------- | ---------- |
 | ![loginOK](image/loginOK.jpg) | ![loginNO](image/loginNO.jpg) |
 
+- відображення каталогу товарів
+
+![Catalogue](image/Catalogue.jpg)
+
 - вихід із системи
 
-![loginForm](image/loginForm.jpg)
+![loginFormOut](image/loginFormOut.jpg)
 
 
 
