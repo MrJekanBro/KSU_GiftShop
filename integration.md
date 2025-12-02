@@ -28,6 +28,7 @@
 
 Для захисту API використовується JWT (JSON Web Token), який передається у заголовку Authorization.
 
+---
 
 ### Використані технології:
 - Backend: Python + Flask
@@ -78,6 +79,8 @@ class Product(db.Model):
     image_url = db.Column(db.String(255))
 ```
 
+---
+
 ### Файл app.py
 
 У файлі реалізовано:
@@ -108,6 +111,8 @@ with app.app_context():
     db.create_all()
 ```
 
+---
+
 Авторизація:
 ```python
 @app.route('/api/login', methods=['POST'])
@@ -134,6 +139,8 @@ def login():
     return jsonify({'error': 'Невірний логін або пароль'}), 401
 ```
 
+---
+
 Захист токеном:
 ```python
 def token_required(f):
@@ -150,3 +157,6 @@ def token_required(f):
         return f(*args, **kwargs)
     return decorated
 ```
+
+---
+
