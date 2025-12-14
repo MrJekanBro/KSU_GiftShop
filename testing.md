@@ -175,8 +175,11 @@ npm test
 
 ## 5. Покриття коду
 
-![Code_coverage](tests/Code_coverage.jpg)
+```cmd
+pytest --cov=app
+```
 
+![Code_coverage](tests/Code_coverage.jpg)
 
 ---
 
