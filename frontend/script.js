@@ -56,6 +56,7 @@ async function loadCatalog(category = "all") {
             <h3>${item.name}</h3>
             <p>Ціна: ${item.price} грн</p>
             <p>Кількість: ${item.quantity} шт</p>
+			<button>У кошик</button>
         `;
         itemsDiv.appendChild(card);
     });
