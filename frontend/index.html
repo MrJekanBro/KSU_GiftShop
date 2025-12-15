@@ -2,18 +2,27 @@
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Сувенірна лавка ХДУ</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
 <header>
     <h1>Сувенірна лавка ХДУ</h1>
+	<button onclick="logout()" class="logout-btn">Вийти</button>
 </header>
 
 <main>
-    <!-- Блок: Реєстрація -->
+    <!-- Логін -->
+    <section id="login">
+        <h2>Вхід</h2>
+        <form id="loginForm">
+            <input type="text" id="login_username" placeholder="Логін" required>
+            <input type="password" id="login_password" placeholder="Пароль" required>
+            <button type="submit">Увійти</button>
+        </form>
+    </section>
+
+    <!-- Блок: Реєстрація (В майбутньому планується залишити блок реєстрації нових користувачив (доступ до блока ТІЛЬКИ для АДМІНА))
     <section id="register">
         <h2>Реєстрація</h2>
         <form id="regForm">
@@ -32,8 +41,9 @@
             <button type="submit" class="register-btn">Зареєструватися</button>
         </form>
     </section>
+	-->
 
-    <!-- Блок: Каталог (показується після реєстрації) -->
+    <!-- Блок: Каталог -->
 	<section id="catalog" style="display:none;">
 		<h2>Каталог товарів</h2>
 		
