@@ -68,7 +68,7 @@ backend (Flask) та бази даних PostgreSQL.
 
 ![Postman_test4](image/Postman_test4.jpg)
 
-### Результат:
+### Запуск колекції: Run Collection - Assert all (перевірка всіх тестів).
 
 ![run](image/run.jpg)
 
