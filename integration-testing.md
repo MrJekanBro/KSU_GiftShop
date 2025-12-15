@@ -76,6 +76,8 @@ backend (Flask) та бази даних PostgreSQL.
 
 ## 4. Системні тести (Cypress):
 
+Для системного (E2E) тестування використано Cypress.
+
 (корінь проекту)/cypress/e2e/ souvenir-shop.cy.js:
 
 ```js
