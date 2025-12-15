@@ -49,6 +49,11 @@ button:hover {
     transition: transform 0.2s, box-shadow 0.2s;
 }
 
+.item-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
 #login h2 {
     text-align: center;
     margin-bottom: 10px;
