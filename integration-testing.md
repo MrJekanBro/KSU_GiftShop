@@ -135,16 +135,28 @@ describe('Souvenir Shop E2E Tests', () => {
 });
 ```
 
-### Запуск:
+### Запуск системних тестів (Cypress)
+
+Для запуску E2E-тестів використовується інструмент **Cypress**.
+
+Запуск тестів у headless-режимі (без графічного інтерфейсу, з відеозаписом):
+
 ```cmd
 npx cypress run
 ```
+
+Запуск тестів з графічним інтерфейсом (Cypress Runner):
 
 ```cmd
 npx cypress open
 ```
 
-* Результат:
+
+---
+
+
+### Результат:
+
 ![npx_cypress_run](image/npx_cypress_run.jpg)
 
 ---
