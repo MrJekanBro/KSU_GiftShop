@@ -73,3 +73,11 @@ button:hover {
 #sort-quantity {
     width: 80px !important;
 }
+
+.product-image {
+    width: 50%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
