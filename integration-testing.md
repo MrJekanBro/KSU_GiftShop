@@ -24,6 +24,8 @@
 
 # 4. Системні тести (Cypress):
 
+(корінь проекту)/cypress/e2e/ souvenir-shop.cy.js:
+
 ```js
 describe('Souvenir Shop E2E Tests', () => {
 
@@ -78,9 +80,16 @@ describe('Souvenir Shop E2E Tests', () => {
     });
 });
 ```
+## Запуск:
+```cmd
+npx cypress run
+```
 
-Результат:
+```cmd
+npx cypress open
+```
 
+* Результат:
 ![npx_cypress_run](image/npx_cypress_run.jpg)
 
 ---
