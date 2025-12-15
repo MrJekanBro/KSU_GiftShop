@@ -5,10 +5,13 @@ import jwt
 from datetime import datetime, timedelta
 from functools import wraps
 
+from flask import send_from_directory
+import os
+
 app = Flask(__name__)
 CORS(app)
 
-app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql://postgres:jeka08122005jeka@localhost/souvenir_shop"
+app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql://postgres:password@localhost/souvenir_shop"
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 db.init_app(app)
 
@@ -67,7 +70,7 @@ def register_user():
         email=data["email"],
         full_name=data.get("full_name", ""),
         password_hash=data.get("password_hash", ""),
-        role=data.get("role", "seller")
+        role=data.get("role", "")
     )
     db.session.add(user)
     db.session.commit()
@@ -116,6 +119,13 @@ def get_products():
         }
         for p in products
     ])
+
+@app.route('/images/products/<path:filename>')
+def product_images(filename):
+    return send_from_directory(
+        os.path.join(app.root_path, 'image/products'),
+        filename
+    )
 
 if __name__ == '__main__':
     app.run(debug=True)
