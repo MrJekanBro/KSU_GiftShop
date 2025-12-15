@@ -1,103 +1,61 @@
-document.getElementById('regForm').addEventListener('submit', async (e) => {
+// Логін
+document.getElementById('loginForm').addEventListener('submit', async (e) => {
     e.preventDefault();
+    const username = document.getElementById('login_username').value;
+    const password = document.getElementById('login_password').value;
 
-    const full_name = document.getElementById('full_name').value;
-    const username = document.getElementById('username').value;
-    const email = document.getElementById('email').value;
-    const password_hash = document.getElementById('password_hash').value;
-	const role = document.getElementById("role").value;
+    const response = await fetch('http://localhost:5000/api/login', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({ username, password })
+    });
 
-
-    try {
-        const response = await fetch('http://localhost:5000/users/register', {
-            method: 'POST',
-            headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify({ full_name, username, email, password_hash: password_hash, role})
-        });
-
-        if (!response.ok) {
-            return alert("Помилка реєстрації");
-        }
-
-        document.getElementById('register').style.display = 'none';
+    const data = await response.json();
+    if (response.ok) {
+        localStorage.setItem('token', data.token);
+        document.getElementById('login').style.display = 'none';
         document.getElementById('catalog').style.display = 'block';
-
-        loadCatalog('all');
-
-    } catch (error) {
-        console.error("Помилка:", error);
+        alert("Ви увійшли!");
+		loadCatalog();
+    } else {
+        alert(data.error || "Помилка входу");
     }
 });
 
+// Запити з токеном
+function apiFetch(url, options = {}) {
+    const token = localStorage.getItem('token');
+    return fetch(url, {
+        ...options,
+        headers: {
+            'Content-Type': 'application/json',
+            ...(token && { Authorization: `Bearer ${token}` })
+        }
+    });
+}
+
+// Завантаження каталогу з БД
 async function loadCatalog(category = "all") {
+    const response = await apiFetch('http://localhost:5000/api/products');
+    const items = await response.json();
+
     const itemsDiv = document.getElementById('items');
-
-	// Тимчасові дані (до створення API)
-	const items = [
-		{name: "Футболка ХДУ", price: 350, category: "одяг", quantity: 12},
-		{name: "Куртка ХДУ", price: 800, category: "одяг", quantity: 6},
-		{name: "Штани ХДУ", price: 600, category: "одяг", quantity: 8},
-		{name: "Светр ХДУ", price: 450, category: "одяг", quantity: 10},
-		{name: "Кросівки ХДУ", price: 1200, category: "взуття", quantity: 4},
-		{name: "Кеди ХДУ", price: 650, category: "взуття", quantity: 10},
-		{name: "Тапочки ХДУ", price: 300, category: "взуття", quantity: 15},
-		{name: "Зошит 32л", price: 10, category: "канцелярія", quantity: 100},
-		{name: "Зошит 48л", price: 15, category: "канцелярія", quantity: 80},
-		{name: "Ручка ХДУ", price: 5, category: "канцелярія", quantity: 250},
-		{name: "Олівець ХДУ", price: 3, category: "канцелярія", quantity: 300},
-		{name: "Маркер ХДУ", price: 20, category: "канцелярія", quantity: 60},
-		{name: "Наліпка ХДУ", price: 15, category: "наліпки", quantity: 80},
-		{name: "Набір наліпок", price: 40, category: "наліпки", quantity: 45},
-		{name: "Стікери ХДУ", price: 25, category: "наліпки", quantity: 70},
-		{name: "Магніт ХДУ", price: 35, category: "магніти", quantity: 30},
-		{name: "Великий магніт ХДУ", price: 60, category: "магніти", quantity: 20},
-		{name: "Магнітний набір ХДУ", price: 80, category: "магніти", quantity: 15},
-		{name: "Кружка ХДУ", price: 120, category: "посуд", quantity: 18},
-		{name: "Тарілка ХДУ", price: 200, category: "посуд", quantity: 10},
-		{name: "Чашка ХДУ", price: 90, category: "посуд", quantity: 25},
-		{name: "Склянка ХДУ", price: 70, category: "посуд", quantity: 30},
-		{name: "Рюкзак ХДУ", price: 750, category: "аксесуари", quantity: 12},
-		{name: "Пенал ХДУ", price: 80, category: "канцелярія", quantity: 50},
-		{name: "Блокнот ХДУ", price: 50, category: "канцелярія", quantity: 40},
-		{name: "Кепка ХДУ", price: 220, category: "одяг", quantity: 15},
-		{name: "Шарф ХДУ", price: 180, category: "одяг", quantity: 20},
-		{name: "Ремінь ХДУ", price: 200, category: "одяг", quantity: 10},
-		{name: "Поясна сумка ХДУ", price: 300, category: "аксесуари", quantity: 18},
-		{name: "Набір фарб", price: 120, category: "канцелярія", quantity: 30},
-		{name: "Пензлі", price: 35, category: "канцелярія", quantity: 50},
-		{name: "Альбом для малювання", price: 60, category: "канцелярія", quantity: 40},
-		{name: "Ланчбокс ХДУ", price: 150, category: "посуд", quantity: 22},
-		{name: "Термос ХДУ", price: 400, category: "посуд", quantity: 15},
-		{name: "Брелок ХДУ", price: 50, category: "аксесуари", quantity: 60},
-		{name: "Сумка для ноутбука", price: 900, category: "аксесуари", quantity: 8},
-		{name: "Папка для документів", price: 70, category: "аксесуари", quantity: 35},
-		{name: "Маска ХДУ", price: 30, category: "аксесуари", quantity: 100},
-		{name: "Антисептик ХДУ", price: 60, category: "аксесуари", quantity: 50},
-		{name: "Наклейки для ноутбука", price: 45, category: "наліпки", quantity: 65},
-		{name: "Значок ХДУ", price: 25, category: "аксесуари", quantity: 80},
-		{name: "Скатертина ХДУ", price: 220, category: "посуд", quantity: 10},
-		{name: "Коврик для миші ХДУ", price: 100, category: "аксесуари", quantity: 40},
-		{name: "Папка-регістратор", price: 120, category: "канцелярія", quantity: 25},
-		{name: "Флешка ХДУ 32GB", price: 250, category: "аксесуари", quantity: 20},
-		{name: "Блокнот з логотипом ХДУ", price: 70, category: "канцелярія", quantity: 45},
-		{name: "Міні-щоденник", price: 60, category: "канцелярія", quantity: 30},
-		{name: "Набір ручок гелевих", price: 30, category: "канцелярія", quantity: 100},
-	];
-
-
     itemsDiv.innerHTML = '';
 
-    // Фільтрація
     const filteredItems = category === "all" ? items : items.filter(item => item.category === category);
 
     filteredItems.forEach(item => {
         const card = document.createElement('div');
         card.classList.add('item-card');
         card.innerHTML = `
+			<img 
+				src="http://localhost:5000/images/products/${item.image_url}" 
+				alt="${item.name}"
+				class="product-image"
+			>
             <h3>${item.name}</h3>
             <p>Ціна: ${item.price} грн</p>
-			<p>Кількість: ${item.quantity} шт</p>
-            <button>У кошик</button>
+            <p>Кількість: ${item.quantity} шт</p>
         `;
         itemsDiv.appendChild(card);
     });
@@ -145,4 +103,11 @@ function sortByQuantity() {
 
     itemsDiv.innerHTML = "";
     cards.forEach(card => itemsDiv.appendChild(card));
+}
+
+// Вихід
+function logout() {
+    localStorage.removeItem('token');
+    document.getElementById('catalog').style.display = 'none';
+    document.getElementById('login').style.display = 'block';
 }
