@@ -17,9 +17,7 @@
 ![Postman_test3](image/Postman_test3.jpg)
 * Запит 4: Отримання каталогу товарів (авторизація + БД)
 ![Postman_test4](image/Postman_test4.jpg)
-
 Результат:
-
 ![run](image/run.jpg)
 
 ---
